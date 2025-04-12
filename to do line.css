@@ -1,0 +1,176 @@
+/* === Base Styling === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf6e3; /* Soft yellow for "bumblebee" theme */
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+/* === Header === */
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-section {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ffd60a;
+    border-radius: 8px;
+    flex-grow: 1;
+}
+
+.btn-add {
+    background-color: #ffd60a;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #fbbf24;
+}
+
+/* === Buttons Section === */
+.todos-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #fcd34d;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fbbf24;
+}
+
+/* === Todo List === */
+.todos-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fef3c7;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+    background-color: #fde68a;
+}
+
+.todo-text {
+    flex-grow: 1;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+    opacity: 0.7;
+}
+
+/* Checkbox Style */
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #b42f2f;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #e22020;
+    font-size: 1.2rem;
+}
+
+/* === Filters === */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #fafd2d;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(236, 233, 233);
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(34, 160, 128, 0.1);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #edfb24;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* === Counters === */
+.completed-task, .remaining-task {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
