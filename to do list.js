@@ -1,4 +1,4 @@
-// Select DOM elements
+
 const input = document.getElementById("todo-input");
 const addBtn = document.getElementById("add-button");
 const todoList = document.getElementById("all-todos");
@@ -9,10 +9,7 @@ const filterPending = document.getElementById("rem");
 const filterCompleted = document.getElementById("com");
 const completedCount = document.getElementById("c-count");
 const totalCount = document.getElementById("r-count");
-
-let todos = []; // Data store
-
-// Add todo
+let todos = []; 
 addBtn.addEventListener("click", () => {
     const text = input.value.trim();
     if (text === "") return;
@@ -22,14 +19,11 @@ addBtn.addEventListener("click", () => {
     renderTodos();
 });
 
-// Allow "Enter" to add
 input.addEventListener("keypress", e => {
     if (e.key === "Enter") {
         addBtn.click();
     }
 });
-
-// Render todos
 function renderTodos(filter = "all") {
     todoList.innerHTML = "";
 
@@ -55,8 +49,6 @@ function renderTodos(filter = "all") {
     completedCount.textContent = todos.filter(t => t.completed).length;
     totalCount.textContent = todos.length;
 }
-
-// Toggle complete or delete
 todoList.addEventListener("click", e => {
     const index = e.target.closest("[data-index]")?.dataset.index;
 
@@ -70,23 +62,15 @@ todoList.addEventListener("click", e => {
 
     renderTodos();
 });
-
-// Delete selected
 deleteSelectedBtn.addEventListener("click", () => {
     todos = todos.filter(todo => !todo.completed);
     renderTodos();
 });
-
-// Delete all
 deleteAllBtn.addEventListener("click", () => {
     todos = [];
     renderTodos();
 });
-
-// Filters
 filterAll.addEventListener("click", () => renderTodos("all"));
 filterPending.addEventListener("click", () => renderTodos("pending"));
 filterCompleted.addEventListener("click", () => renderTodos("completed"));
-
-// Initial render
 renderTodos();
