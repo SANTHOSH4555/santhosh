@@ -1,9 +1,9 @@
-/* === Base Styling === */
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdf6e3; /* Soft yellow for "bumblebee" theme */
+    background-color: #fdf6e3;
     color: #333;
 }
 
@@ -16,7 +16,6 @@ body {
     border-radius: 12px;
 }
 
-/* === Header === */
 header h1 {
     font-size: 2rem;
     text-align: center;
@@ -50,14 +49,11 @@ header h1 {
 .btn-add:hover {
     background-color: #fbbf24;
 }
-
-/* === Buttons Section === */
 .todos-filter {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
-
 .btn {
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -66,12 +62,9 @@ header h1 {
     cursor: pointer;
     transition: 0.3s ease;
 }
-
 .btn:hover {
     background-color: #fbbf24;
 }
-
-/* === Todo List === */
 .todos-list {
     list-style-type: none;
     padding: 0;
@@ -104,15 +97,11 @@ header h1 {
     color: #9ca3af;
     opacity: 0.7;
 }
-
-/* Checkbox Style */
 .todo-checkbox {
     width: 18px;
     height: 18px;
     accent-color: #b42f2f;
 }
-
-/* Delete Button */
 .delete-btn {
     background: transparent;
     border: none;
@@ -120,8 +109,6 @@ header h1 {
     color: #e22020;
     font-size: 1.2rem;
 }
-
-/* === Filters === */
 .filters {
     display: flex;
     justify-content: space-between;
@@ -168,8 +155,6 @@ header h1 {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-/* === Counters === */
 .completed-task, .remaining-task {
     font-size: 0.9rem;
     margin-top: 0.5rem;
